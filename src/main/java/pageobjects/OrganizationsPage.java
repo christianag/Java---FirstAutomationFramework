@@ -78,7 +78,6 @@ public class OrganizationsPage extends BasePage {
     @FindBy(xpath = "/html/body/div/div/div[3]/div[3]/div/div[2]/table/tbody/tr/td[8]/a[1]")
     private WebElement editButton;
 
-
     // METHODS
     public void goToOrganizationsMenu() {
         LOGGER.info("Navigating to the Organizations menu.");
@@ -93,9 +92,8 @@ public class OrganizationsPage extends BasePage {
         Thread.sleep(1000);
     }
 
-    // CREATE NEW ORG METHODS
     public void iframeOrgDescription(String iframeText) {
-        LOGGER.info("Entering text in description field.");
+        LOGGER.info("Entering text in the iframe description field.");
         bpDriver.switchTo().frame(descriptionIframe);
         orgDescriptionField.sendKeys(iframeText);
         bpDriver.switchTo().defaultContent();
@@ -165,7 +163,6 @@ public class OrganizationsPage extends BasePage {
             bpDriver.findElement(By.xpath(DELETE_POPUP_BUTTON)).click();
             WebElement successfulDelete = bpDriver.findElement(By.xpath(DELETE_POPUP + "/h2"));
             Assert.assertEquals(successfulDelete.getText().trim(), "Success");
-//            bpDriver.findElement(By.xpath(DELETE_POPUP_BUTTON)).click();
         }
     }
 
@@ -182,6 +179,5 @@ public class OrganizationsPage extends BasePage {
             Assert.assertEquals(checkEditedEmail.getText().trim(), "edited@mail.com");
         }
     }
-
 
 }
