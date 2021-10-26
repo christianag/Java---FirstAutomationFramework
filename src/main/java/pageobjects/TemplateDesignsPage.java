@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -16,7 +15,6 @@ public class TemplateDesignsPage extends BasePage {
         super(driver);
     }
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(LoginPage.class));
-
 
     //CONSTANTS
     public static final String TEMPLATE_DESIGNS_MENU = "/html/body/div/div/div[1]/div/div[3]/div/ul/li[11]/a";
@@ -125,7 +123,6 @@ public class TemplateDesignsPage extends BasePage {
 
     @FindBy(xpath = "//*[@id='app']/div/div/div/div/div/div[2]/div/div[2]/div[2]/div[3]/div[2]/div[1]/div/button")
     private WebElement badgeButton;
-
 
     //METHODS
     public void goToTemplateDesignsMenu() {
