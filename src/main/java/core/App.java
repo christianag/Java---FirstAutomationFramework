@@ -7,7 +7,6 @@ import pageobjects.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
@@ -21,7 +20,6 @@ public class App {
     private LoginPage loginPage;
     private IssueDiplomasPage issueDiplomasPage;
     private OrganizationsPage organizationsPage;
-    private AppDashboardPage appDashboardPage;
     private SearchDiplomasPage searchDiplomasPage;
     private UserManagementPage userManagementPage;
     private TemplateDesignsPage templateDesignsPage;
@@ -31,11 +29,10 @@ public class App {
     public void startBrowser() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-//        options.setHeadless(true);
-//        options.addArguments("--window-size=1920,1080");
+        options.setHeadless(true);
+        options.addArguments("--window-size=1920,1080");
         appDriver = new ChromeDriver(options);
         appDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        appDriver.manage().window().maximize();
         LOGGER.info("******************************************************************");
     }
 
@@ -46,6 +43,7 @@ public class App {
         appDriver.quit();
     }
 
+    //LOGGING ERRORS FROM BROWSER'S CONSOLE
     public void logErrors() {
         LOGGER.info("*********************** Checking for console errors.");
         LogEntries logEntries = appDriver.manage().logs().get("browser");
@@ -89,13 +87,6 @@ public class App {
             issueDiplomasPage = new IssueDiplomasPage(appDriver);
         }
         return issueDiplomasPage;
-    }
-
-    public AppDashboardPage appDashboardPage() {
-        if (appDashboardPage == null) {
-            appDashboardPage = new AppDashboardPage(appDriver);
-        }
-        return appDashboardPage;
     }
 
     public SearchDiplomasPage searchDiplomasPage() {
