@@ -6,10 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
 import java.util.List;
 import java.util.logging.Logger;
-
 
 public class SearchDiplomasPage extends BasePage {
 
@@ -49,7 +47,6 @@ public class SearchDiplomasPage extends BasePage {
 
     @FindBy(xpath = "//*[@id='demo-form2']/button")
     private WebElement searchButton;
-
 
     // METHODS
     public void goToDiplomasMenu() {
