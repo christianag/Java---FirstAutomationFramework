@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import java.util.logging.Logger;
 
-
 public class LoginPage extends BasePage {
 
     public LoginPage(WebDriver driver){
@@ -14,10 +13,10 @@ public class LoginPage extends BasePage {
     private static final Logger LOGGER = Logger.getLogger(String.valueOf(LoginPage.class));
 
     // CONSTANTS
-    public static final String BASE_URL = "https://test-admin.diplomasafe.net/en-US";
-    public static final String EMAIL = "kristiana.georgieva@lab08.com";
-    public static final String PASSWORD = "kigQDT21";
-    public static final String EXPECTED_OUTCOME = "https://test-admin.diplomasafe.net/en-US/admin/organization-list";
+    public static final String BASE_URL = "https://test.com";
+    public static final String EMAIL = "email@email.com";
+    public static final String PASSWORD = "password";
+    public static final String EXPECTED_OUTCOME = "https://test.com";
 
     // PAGE ELEMENTS
     @FindBy(xpath = "//input[@type='email']")
