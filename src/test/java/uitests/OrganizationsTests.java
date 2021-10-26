@@ -1,7 +1,6 @@
 package uitests;
 
 import core.BaseClass;
-
 import org.testng.annotations.*;
 import pageobjects.OrganizationsPage;
 
