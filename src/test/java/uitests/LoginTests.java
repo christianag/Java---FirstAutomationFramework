@@ -4,7 +4,6 @@ import core.BaseClass;
 import org.testng.annotations.Test;
 import pageobjects.LoginPage;
 
-
 public class LoginTests extends BaseClass {
 
     @Test
