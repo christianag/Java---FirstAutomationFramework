@@ -17,8 +17,8 @@ public class IssueDiplomasTests extends BaseClass {
     @Test
     public void issueDiplomaWithExcel() throws InterruptedException {
         app.issueDiplomasPage().selectIssuanceType("Single");
-        app.issueDiplomasPage().selectOrg("Lab08");
-        app.issueDiplomasPage().selectTemplate("ChrisTest_designviewPT");
+        app.issueDiplomasPage().selectOrg("Organization Name");
+        app.issueDiplomasPage().selectTemplate("Template Name");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().inputType("Upload Excel", IssueDiplomasPage.EXCEL_FILE);
         app.issueDiplomasPage().clickNext();
@@ -28,11 +28,11 @@ public class IssueDiplomasTests extends BaseClass {
     @Test
     public void issueDiplomaWithInput() throws InterruptedException {
         app.issueDiplomasPage().selectIssuanceType("Single");
-        app.issueDiplomasPage().selectOrg("Lab08");
-        app.issueDiplomasPage().selectTemplate("ChrisTest_designviewPT");
+        app.issueDiplomasPage().selectOrg("Organization Name"");
+        app.issueDiplomasPage().selectTemplate("Template Name");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().inputType("Input Form");
-        app.issueDiplomasPage().inputForm("Automation / Design View PT", "kristiana.georgieva@lab08.com", "10/22/2021");
+        app.issueDiplomasPage().inputForm("Diploma Name", "test@test.com", "10/22/2021");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().issueDiplomasNow();
     }
@@ -40,9 +40,8 @@ public class IssueDiplomasTests extends BaseClass {
     @Test
     public void issueBundleWithExcel() throws InterruptedException {
         app.issueDiplomasPage().selectIssuanceType("Bundle");
-        app.issueDiplomasPage().selectOrg("Lab08");
-//        app.issueDiplomasPage().selectTemplate("Stefan test 2"); // for TEST env.
-        app.issueDiplomasPage().selectTemplate("Lab08 Bundle"); // for DEMO env.
+        app.issueDiplomasPage().selectOrg("Organization Name");
+        app.issueDiplomasPage().selectTemplate("Bundle Name");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().inputType("Upload Excel", IssueDiplomasPage.EXCEL_FILE);
         app.issueDiplomasPage().clickNext();
@@ -52,12 +51,11 @@ public class IssueDiplomasTests extends BaseClass {
     @Test
     public void issueBundleWithInput() throws InterruptedException {
         app.issueDiplomasPage().selectIssuanceType("Bundle");
-        app.issueDiplomasPage().selectOrg("Lab08");
-//        app.issueDiplomasPage().selectTemplate("Stefan test 2");
-        app.issueDiplomasPage().selectTemplate("Lab08 Bundle"); // for DEMO env.
+        app.issueDiplomasPage().selectOrg("Organization Name");
+        app.issueDiplomasPage().selectTemplate("Bundle Name");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().inputType("Input Form");
-        app.issueDiplomasPage().inputForm("Automation Bundle Test", "kristiana.georgieva@lab08.com", "10/21/2021");
+        app.issueDiplomasPage().inputForm("Diploma Name", "test@test.com", "10/22/2021");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().issueDiplomasNow();
     }
@@ -65,8 +63,8 @@ public class IssueDiplomasTests extends BaseClass {
     @Test
     public void postponeDiplomaWithDate() throws InterruptedException {
         app.issueDiplomasPage().selectIssuanceType("Single");
-        app.issueDiplomasPage().selectOrg("Lab08");
-        app.issueDiplomasPage().selectTemplate("ChrisTest_designs02");
+        app.issueDiplomasPage().selectOrg("Organization Name");
+        app.issueDiplomasPage().selectTemplate("Template Name");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().inputType("Upload Excel", IssueDiplomasPage.EXCEL_FILE);
         app.issueDiplomasPage().clickNext();
@@ -78,11 +76,11 @@ public class IssueDiplomasTests extends BaseClass {
     @Test
     public void postponeDiplomaNoPlannedTime() throws InterruptedException {
         app.issueDiplomasPage().selectIssuanceType("Single");
-        app.issueDiplomasPage().selectOrg("Lab08");
-        app.issueDiplomasPage().selectTemplate("ChrisTest04");
+        app.issueDiplomasPage().selectOrg("Organization Name");
+        app.issueDiplomasPage().selectTemplate("Template Name");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().inputType("Input Form");
-        app.issueDiplomasPage().inputForm("AUTOMATION POSTPONED no date", "kristiana.georgieva@lab08.com", "10/21/2021");
+        app.issueDiplomasPage().inputForm("Diploma Name", "test@test.com", "10/22/2021");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().setPostponeDate();
         app.issueDiplomasPage().noPlannedTime();
@@ -92,12 +90,11 @@ public class IssueDiplomasTests extends BaseClass {
     @Test
     public void postponeBundleWithDate() throws InterruptedException {
         app.issueDiplomasPage().selectIssuanceType("Bundle");
-        app.issueDiplomasPage().selectOrg("Lab08");
-//        app.issueDiplomasPage().selectTemplate("Stefan test 2");
-        app.issueDiplomasPage().selectTemplate("Lab08 Bundle"); // for DEMO env.
+        app.issueDiplomasPage().selectOrg("Organization Name");
+        app.issueDiplomasPage().selectTemplate("Bundle Name");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().inputType("Input Form");
-        app.issueDiplomasPage().inputForm("AUTOMATION BUNDLE POSTPONED with date", "kristiana.georgieva@lab08.com", "10/21/2021");
+        app.issueDiplomasPage().inputForm("Diploma Name", "test@test.com", "10/22/2021");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().setPostponeDate();
         app.issueDiplomasPage().postponeToSpecificDate("10/31/2021");
@@ -107,8 +104,8 @@ public class IssueDiplomasTests extends BaseClass {
     @Test
     public void postponeBundleNoPlannedTime() throws InterruptedException {
         app.issueDiplomasPage().selectIssuanceType("Bundle");
-        app.issueDiplomasPage().selectOrg("Lab08");
-        app.issueDiplomasPage().selectTemplate("Stefan test 2");
+        app.issueDiplomasPage().selectOrg("Organization Name");
+        app.issueDiplomasPage().selectTemplate("Bundle Name");
         app.issueDiplomasPage().clickNext();
         app.issueDiplomasPage().inputType("Upload Excel", IssueDiplomasPage.EXCEL_FILE);
         app.issueDiplomasPage().clickNext();
