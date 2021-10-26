@@ -18,8 +18,8 @@ public class TemplatesPage extends BasePage {
     static int languageID = 1;
 
     // CONSTANTS
-    public static final String NEW_TEMPLATE_NAME = "ChrisTest_designviewPT";
-    public static final String ORG_NAME = "Lab08";
+    public static final String NEW_TEMPLATE_NAME = "Template Name";
+    public static final String ORG_NAME = "Organization Name";
     public static final String TEMPLATES_MENU = "//ul[@class='nav side-menu']//li[14]/a";
     public static final String TEMPLATE_TYPE = "//*[@id='template-type-select']";
     public static final String PRESENTATION_VIEW = "//*[@id='presentation_view_select']";
