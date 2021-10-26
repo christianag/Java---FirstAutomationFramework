@@ -10,17 +10,12 @@ import java.util.List;
 public class GenerateExcel {
 
     private static final List<ExcelFile> excelFile = new ArrayList<ExcelFile>();
-//    private static final String[] columns = {"name", "email", "issue_date", "mejeri_final_exam_date"};
     private static final String[] columns = {"name", "email", "issue_date"};
     private static final String fileName = "automation.xls";
 
     public static void main(String[] args) throws IOException {
-        excelFile.add(new ExcelFile("Automation / Invalid Dates EN", "Kristiana.Georgieva@lab08.com", "2021-10-21"));
-//        excelFile.add(new ExcelFile("Automation Test", "ChrisTiana.Georgieva@gmail.com", "2021-10-12"));
+        excelFile.add(new ExcelFile("First Last name", "email@email.com", "2021-10-26"));
 
-
-//        for xlsx files
-//        XSSFWorkbook workbook = new XSSFWorkbook();
         HSSFWorkbook workbook = new HSSFWorkbook();
         Sheet sheet = workbook.createSheet();
         Font headerFont = workbook.createFont();
@@ -41,16 +36,11 @@ public class GenerateExcel {
             row.createCell(0).setCellValue(excelFile.name);
             row.createCell(1).setCellValue(excelFile.email);
             row.createCell(2).setCellValue(excelFile.issue_date);
-//            row.createCell(3).setCellValue(excelFile.mejeri_final_exam_date);
-
         }
 
         FileOutputStream fileOut = new FileOutputStream(fileName);
         workbook.write(fileOut);
         fileOut.close();
-
     }
-
-
 
 }
