@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
 import java.util.logging.Logger;
 
 public class UserManagementPage extends BasePage {
@@ -61,7 +60,6 @@ public class UserManagementPage extends BasePage {
 
     @FindBy(xpath = "/html/body/div[3]/div[7]/div/button")
     private WebElement popupYesButton;
-
 
     //METHODS
     public void goToUserManagementMenu() {
