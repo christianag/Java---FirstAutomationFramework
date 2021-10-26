@@ -12,6 +12,7 @@ public class BaseClass {
         app.startBrowser();
     }
 
+    //this should be disabled if LoginTests.java tests are running
     @BeforeClass
     public static void login() {
         app.loginPage().login();
@@ -22,13 +23,13 @@ public class BaseClass {
         app.logErrors();
     }
 
-//    @AfterClass
-//    public static void logout() {
-//        app.loginPage().logout();
-//    }
-//
-//    @AfterSuite
-//    public static void tearDown() {
-//        app.quit();
-//    }
+   @AfterClass
+   public static void logout() {
+       app.loginPage().logout();
+   }
+
+   @AfterSuite
+   public static void tearDown() {
+       app.quit();
+   }
 }
