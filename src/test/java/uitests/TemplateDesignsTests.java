@@ -10,14 +10,10 @@ public class TemplateDesignsTests extends BaseClass {
     public void setUpDesignBuilderPage() throws InterruptedException {
         app.templateDesignsPage().goToTemplateDesignsMenu();
         app.templateDesignsPage().setUpDesignName("Automation Design Name");
-        app.templateDesignsPage().setUpOrgName("Lab08");
+        app.templateDesignsPage().setUpOrgName("Organization Name");
         app.templateDesignsPage().setLanguage("English");
         app.templateDesignsPage().clickNext();
-
-        // the options for Page Format are:
-        // "A4 Portrait" (default), "A4 Landscape", "Letter Portrait", "Letter Landscape"
         app.templateDesignsPage().selectPageFormat("A4 Portrait");
-
         app.templateDesignsPage().selectLayout();
     }
 
@@ -40,8 +36,6 @@ public class TemplateDesignsTests extends BaseClass {
         app.templateDesignsPage().addNewField("Verification Link");
         app.templateDesignsPage().addNewField("Verification QR Code");
         app.templateDesignsPage().addNewField("Expiry Date");
-        app.templateDesignsPage().addNewField("Course Title Multiline");
-        app.templateDesignsPage().addNewField("Personal Identifier");
     }
 
 }
