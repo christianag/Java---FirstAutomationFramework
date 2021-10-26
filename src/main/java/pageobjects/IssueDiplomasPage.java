@@ -20,7 +20,7 @@ public class IssueDiplomasPage extends BasePage {
     public static final String SELECT_ORG_FIELD = "/html/body/div/div/div[3]/div[3]/div/div/div/div/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/div/div/div/div/div/div[2]";
     public static final String SELECT_TEMPLATE_FIELD = "/html/body/div/div/div[3]/div[3]/div/div/div/div/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/div[2]/div[1]/div/div/div/div/div[2]";
     public static final String INPUT_TYPE = "/html/body/div/div/div[3]/div[3]/div/div/div/div/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/div[3]/div/div[1]/div";
-    public static final String EXCEL_FILE = "C:\\Users\\Kristiana\\Desktop\\Java\\DiplomasafeAutomationTests\\automation.xls";
+    public static final String EXCEL_FILE = "C:\\Users\\Kristiana\\Desktop\\Java\\FirstAutomationTests\\automation.xls";
     public static final String SUCCESSFUL_DIPLOMA_ISSUANCE = "//*[@id='appV]/div/div/div/div/section/div/h3";
     public static final String ISSUE_DIPLOMAS_NOW_BUTTON = "//*[@id='app']/div/div/div/div/div[2]/div/div[3]/div[2]/button[1]";
     public static final String CALENDAR_DAYS_LIST = "/html/body/div/div/div[3]/div[3]/div/div/div/div/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div[2]/form/div/div/div[3]/div/div/div/div[1]/div/div/div[3]";
