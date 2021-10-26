@@ -81,7 +81,7 @@ public class BasePage {
     }
 
     public void datePicker(String allDatesBox, String day) {
-        LOGGER.info("Picking date from date picker pop-up.");
+        LOGGER.info("Picking date from a clandar pop-up.");
         WebElement table = bpDriver.findElement(By.xpath(allDatesBox));
         List<WebElement> buttons = table.findElements(By.tagName("button"));
         mainloop:
@@ -95,33 +95,5 @@ public class BasePage {
             }
         }
     }
-
-
-//    protected void iterateDropdownList(String dropdown, String choice) {
-//        List<WebElement> list = bpDriver.findElements(By.xpath(dropdown));
-//        for(WebElement webElement : list) {
-//            if(webElement.getText().trim().equals(choice)){
-//                LOGGER.info(webElement.getText().trim());
-//                webElement.click();
-//                break;
-//            }
-//        }
-//    }
-//
-//    protected void iterateThroughList(String table, String choice) {
-//        WebElement tableElements = bpDriver.findElement(By.xpath(table));
-//        List<WebElement> rows = tableElements.findElements(By.tagName("tr"));
-//        mainloop:
-//        for (int i = 0; i < rows.size(); i++) {
-//            List<WebElement> cols = rows.get(i).findElements(By.tagName("td"));
-//            for (int j = 0; j < cols.size(); j++) {
-//                if (cols.get(j).getText().contains(choice)) {
-//                    cols.get(0).findElement(By.tagName("input")).click();
-//                    break mainloop;
-//                }
-//            }
-//        }
-//    }
-
 
 }
