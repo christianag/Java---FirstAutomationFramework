@@ -37,11 +37,9 @@ public class App {
     }
 
     // METHODS
-    public void close() { appDriver.close();}
+    public void close() { appDriver.close(); }
 
-    public void quit() {
-        appDriver.quit();
-    }
+    public void quit() { appDriver.quit(); }
 
     //LOGGING ERRORS FROM BROWSER'S CONSOLE
     public void logErrors() {
