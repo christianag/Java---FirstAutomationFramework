@@ -24,7 +24,7 @@ public class App {
     private UserManagementPage userManagementPage;
     private TemplateDesignsPage templateDesignsPage;
 
-    // BROWSER (START & QUIT)
+    // BROWSER SET UP
     private WebDriver appDriver;
     public void startBrowser() {
         WebDriverManager.chromedriver().setup();
@@ -36,9 +36,8 @@ public class App {
         LOGGER.info("******************************************************************");
     }
 
-    // METHODS
+    // BROWSER TEAR DOWN
     public void close() { appDriver.close(); }
-
     public void quit() { appDriver.quit(); }
 
     //LOGGING ERRORS FROM BROWSER'S CONSOLE
@@ -59,6 +58,7 @@ public class App {
         }
     }
 
+    // PAGES SET UP
     public LoginPage loginPage() {
         if (loginPage == null) {
             loginPage = new LoginPage(appDriver);
